@@ -15,30 +15,22 @@ goal_1 = 54
 scorers = scoringplayer1 + " " + str(goal_0)+","" "+ scoringplayer2+ " "+str(goal_1)
 
 #1.4 f string
-report = f"{scoringplayer1} scored in the {goal_0}nd minute {scoringplayer2} scored in the {goal_1}th minute"
-
-# 2.1
+report = f"{scoringplayer1} scored in the {goal_0}nd minute\n{scoringplayer2} scored in the {goal_1}th minute" 
+ 
+#Part 2
+#2.1
 player = 'Ruud Gullit'
-
 #2.2
-first_name = player[:player.find(' ')] #2
-
+first_name = player[:player.find(' ')]
 #2.3
-last_name_len = len(player[player.find(" "):] [:-1]) # 3
-
+last_name_len = len(player[player.find(" "):] [:-1])
 #2.4
-last_name = player[player.find(' '):] # voor name short
-
+last_name = player[player.find(' '):]
 name_short = first_name[:-3] + '.' + last_name
 
 #2.5
-chant= len(first_name)*f'{first_name}!' #werkt
+chant_full = f"{first_name}! " * int(len(first_name))
+chant=chant_full[:-1]
 
 #2.6
-good_chant= print(2 != 3) # is 6 een vraag? moet ik iets doen?
-
-
-
-
-
-
+good_chant = chant[-1] != ' '
